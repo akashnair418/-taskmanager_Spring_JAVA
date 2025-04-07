@@ -1,0 +1,158 @@
+{
+	"info": {
+		"_postman_id": "14eba622-1105-45f4-ab74-386db7de48ca",
+		"name": "TaskManager",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43768391",
+		"_collection_link": "https://akashnair-6766726.postman.co/workspace/Akash-Nair's-Workspace~14d90acf-2eef-46d9-8a4d-5b7680c8df05/collection/43768391-14eba622-1105-45f4-ab74-386db7de48ca?action=share&source=collection_link&creator=43768391"
+	},
+	"item": [
+		{
+			"name": "Create new tasks",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"THIS IS TITLE 3\",\r\n    \"description\": \"THIS IS DES 1\",\r\n    \"deadline\": \"2023-08-03\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3232/tasks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3232",
+					"path": [
+						"tasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All tasks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3232/tasks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3232",
+					"path": [
+						"tasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get task by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3232/tasks/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3232",
+					"path": [
+						"tasks",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateTask",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"completed\": \"true\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3232/tasks/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3232",
+					"path": [
+						"tasks",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add note to task",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"anothwe new 2 note title\",\r\n    \"body\":\"new 2 note body\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3232/tasks/2/notes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3232",
+					"path": [
+						"tasks",
+						"2",
+						"notes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all notes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3232/tasks/2/notes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3232",
+					"path": [
+						"tasks",
+						"2",
+						"notes"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
